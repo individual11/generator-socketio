@@ -23,7 +23,7 @@ var SocketioGenerator = module.exports = function SocketioGenerator(args, option
 
 util.inherits(SocketioGenerator, yeoman.generators.Base);
 
-SocketioGenerator.prototype.getProjectName = function getProjectName(){
+SocketioGenerator.prototype.getProjectInfo = function getProjectInfo(){
 
   var cb = this.async();
   // have Yeoman greet the user.
@@ -31,13 +31,32 @@ SocketioGenerator.prototype.getProjectName = function getProjectName(){
 
   var prompts = [{
     name: 'projectName',
-    message: 'What do you want to call this project?'
+    message: 'What do you want to call this project?',
+    default:path.basename(process.cwd())
+  },{
+    name:'projectDescription',
+    message:'Write a brief description.'
+  },{
+    name:'runningPortNumber',
+    message:'What port number would you like to run on?',
+    default:1337,
+    validate: function( value ) {
+      if (Number(value) !== NaN) {
+        return true;
+      } else {
+        return 'Please enter a valid port number.';
+      }
+    }
   }];
 
   this.prompt(prompts, function (props) {
     this.projectName = props.projectName;
+    this.projectDescription = props.projectDescription;
+    this.runningPortNumber = props.runningPortNumber;
 
-    console.log(this.projectName);
+
+    console.log(this.projectName + ((this.projectDescription.length)? (" - " + this.projectDescription):''));
+    console.log('to run on port - ' + this.runningPortNumber);
 
     cb();
   }.bind(this));
