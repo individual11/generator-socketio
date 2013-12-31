@@ -126,7 +126,7 @@ SocketioGenerator.prototype.runtime = function runtime() {
 };
 
 SocketioGenerator.prototype.bootstrapFiles = function bootstrapFiles() {
-  if(!this.shouldUseBootstrap){
+  if(!this.shouldUseBootstrap && !this.format){
     //move on if we shouldn't use bootstrap
     return;
   }
