@@ -1,6 +1,6 @@
 # generator-socketio 
 
-A generator for [Yeoman](http://yeoman.io).
+A generator for [Yeoman](http://yeoman.io) that will get you setup quickly with [socket.io](http://socket.io/) and [Bootstrap](http://getbootstrap.com/).
 
 
 ## Getting Started
