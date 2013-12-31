@@ -5,7 +5,7 @@
 **************************************/
 
 // connect to our socket server
-var socket = io.connect('http://127.0.0.1:1337/');
+var socket = io.connect('http://127.0.0.1:<%=runningPortNumber%>/');
 
 var app = app || {};
 

@@ -4,10 +4,36 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><%=projectName%></title>
-        <meta name="description" content="">
+        <meta name="description" content="<%=projectDescription%>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/core.css">
+
+        <style>
+
+        	input:focus,
+			select:focus,
+			textarea:focus,
+			button:focus {
+			    outline: none !important;
+			}
+
+        	#allPosts {
+			    resize: none;
+			    font-size: 12px;
+			    border-radius: 5px;
+			    border: #ccc solid 1px;
+			    line-height: 14px;
+			    height:100px;
+			    overflow: scroll;
+			}
+
+			p{
+		    	margin:0;
+		    	padding:0;
+		    }
+
+		</style>
     </head>
     <body>
 
@@ -18,7 +44,7 @@
     <div class="container">
     	<div class="jumbotron">
         	<h1><%=projectName%></h1>
-       		<p>Doing some socket example tests.</p>
+       		<p><%=projectDescription%></p>
        		<div class="row">
        			<div class="col-md-4 col-sm-6 col-xs-6">
        				<h3>All Chatter<button id="clearAllPosts" type="button" class="btn btn-danger btn-xs pull-right">clear</button></h3>

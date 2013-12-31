@@ -3,7 +3,7 @@
 var moment = require('moment');
  
 var LIVERELOAD_PORT = 35729;
-var RUNNING_PORT = 1337; // <- if you change this, you need to change in public/js/app.js and recompile
+var RUNNING_PORT = <%=runningPortNumber%>; // <- if you change this, you need to change in public/js/app.js and recompile
 var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
@@ -156,6 +156,8 @@ module.exports = function (grunt) {
       }
     },
 
+    // run 'watch' and 'nodemon' indefinitely, together
+    // 'launch' will just kick it off, and won't stay running
     concurrent: {
         target: {
             tasks: ['nodemon', 'watch', 'launch'],
@@ -191,7 +193,7 @@ module.exports = function (grunt) {
  
   //grunt.registerTask('server', ['build', 'connect:livereload', 'open', 'watch']);
  
-  grunt.registerTask('build', ['<%= format %>', 'concat', 'uglify']);
+  grunt.registerTask('build', ['<%=format%>', 'concat', 'uglify']);
 
   grunt.registerTask('launch', ['wait', 'open']);
 

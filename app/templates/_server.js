@@ -11,6 +11,8 @@ var server = require('http').createServer(app)
 var io = require('socket.io').listen(server);
 var device  = require('express-device');
 
+var runningPortNumber = process.env.PORT;
+
 
 app.configure(function(){
 	// I need to access everything in '/public' directly
@@ -52,5 +54,5 @@ io.sockets.on('connection', function (socket) {
 });
 
 
-server.listen(1337);//listen on port 1337
+server.listen(runningPortNumber);
 
