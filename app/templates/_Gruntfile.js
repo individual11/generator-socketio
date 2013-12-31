@@ -35,7 +35,7 @@ module.exports = function (grunt) {
           style: 'compressed'
         },
         files: {
-          'public/css/core.css': 'public/bower_components/bootstrap-sass/sass/bootstrap.sass',
+          'public/css/core.css': 'public/bower_components/sass-bootstrap/lib/bootstrap.scss',
         }
       }
     },
