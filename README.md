@@ -29,10 +29,16 @@ To install generator-socketio from npm, run:
 $ npm install -g generator-socketio
 ```
 
-Finally, initiate the generator:
+Then, initiate the generator:
 
 ```
 $ yo socketio
+```
+
+Finally, run the program:
+
+```
+$ grunt
 ```
 
 ### Getting To Know Yeoman
