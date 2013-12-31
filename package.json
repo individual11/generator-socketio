@@ -1,6 +1,6 @@
 {
   "name": "generator-socketio",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A generator for Yeoman",
   "keywords": [
     "yeoman-generator"
@@ -9,7 +9,7 @@
   "bugs": "https://github.com/individual11/generator-socketio/issues",
   "author": {
     "name": "David Vogeleer",
-    "email": "",
+    "email": "david@individual11.com",
     "url": "https://github.com/individual11"
   },
   "main": "app/index.js",
