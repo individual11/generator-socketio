@@ -1,6 +1,6 @@
 {
   "name": "generator-socketio",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A generator for Yeoman to run a simple socket.io example",
   "keywords": [
     "yeoman-generator",
