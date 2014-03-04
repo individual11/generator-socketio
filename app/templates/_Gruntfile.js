@@ -15,6 +15,14 @@ module.exports = function (grunt) {
  
   grunt.initConfig({
 
+    cssmin: {
+      combine: {
+        files: {
+          'public/css/core.css': 'public/bower_components/bootstrap.css/css/bootstrap.css'
+        }
+      }
+    },
+
     less: {
       options: {
         //report:'gzip'
@@ -193,7 +201,7 @@ module.exports = function (grunt) {
  
   //grunt.registerTask('server', ['build', 'connect:livereload', 'open', 'watch']);
  
-  grunt.registerTask('build', ['<%=format%>', 'concat', 'uglify']);
+  grunt.registerTask('build', ['<%= (format == "css" ) ? "cssmin" : format %>', 'concat', 'uglify']);
 
   grunt.registerTask('launch', ['wait', 'open']);
 
