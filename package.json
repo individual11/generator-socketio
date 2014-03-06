@@ -1,6 +1,6 @@
 {
   "name": "generator-socketio",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A generator for Yeoman to run a simple socket.io example",
   "keywords": [
     "yeoman-generator",
@@ -15,6 +15,12 @@
     "email": "david@individual11.com",
     "url": "https://github.com/individual11"
   },
+  "contributors": [
+    {
+      "name": "cesine",
+      "url": "https://github.com/cesine"
+    }
+  ],
   "main": "app/index.js",
   "repository": {
     "type": "git",
